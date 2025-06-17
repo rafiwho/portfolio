@@ -74,10 +74,8 @@
                 const title = this.querySelector('h3').textContent;
                 const description = this.querySelector('p').textContent;
                 alert(`Title: ${title}\nDescription: ${description}`);
-                
-                // Remove active class from all cards
+
                 cards.forEach(c => c.classList.remove('active'));
-                // Add active class to clicked card
                 this.classList.add('active');
             });
         });
