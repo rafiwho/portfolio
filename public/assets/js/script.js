@@ -30,16 +30,20 @@ document.addEventListener('DOMContentLoaded', function () {
     showSlide(current);
 });
 
-document.querySelectorAll('nav a[href="education"], nav a[href="projects"], nav a[href="skills"]').forEach(function (link) {
+document.querySelectorAll('nav a[href="home"], nav a[href="education"], nav a[href="projects"], nav a[href="skills"]').forEach(function (link) {
     link.addEventListener('click', function (event) {
-        event.preventDefault()
-        if (this.getAttribute('href') === 'education') {
-            alert('clicked education')
-        } else if (this.getAttribute('href') === 'projects') {
-            alert('clicked projects')
-        } else if (this.getAttribute('href') === 'skills') {
-            alert('clicked skills')
+        event.preventDefault();
+        let href = this.getAttribute('href');
+        if (href === 'education') {
+            alert('clicked education');
+        } else if (href === 'projects') {
+            alert('clicked projects');
+        } else if (href === 'skills') {
+            alert('clicked skills');
+        } else if (href === 'home') {
+            alert('clicked home');
         }
+        window.location = href;
     })
 })
 
