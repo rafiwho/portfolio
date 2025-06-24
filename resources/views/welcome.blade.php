@@ -1,84 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Cards</title>
-    <style>
-        .container {
-            display: flex;
-            gap: 20px;
-            padding: 20px;
-        }
-        .card {
-            width: 200px;
-            background: white;
-            border: 1px solid #ddd;
-            padding: 10px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .card img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-        }
-        .card h3 {
-            margin: 10px 0;
-            color: #333;
-        }
-        .card p {
-            color: #666;
-            font-size: 14px;
-            margin: 0;
-        }
-        .card.active {
-            background-color: #e3f2fd;
-            border-color: #2196f3;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="card" data-description="A beautiful mountain landscape with snow-capped peaks">
-            <img src="https://picsum.photos/200/150?1">
-            <h3>Mountain View</h3>
-            <p>A beautiful mountain landscape with snow-capped peaks</p>
-        </div>
-        <div class="card" data-description="A serene beach scene with crystal clear waters">
-            <img src="https://picsum.photos/200/150?2">
-            <h3>Beach Paradise</h3>
-            <p>A serene beach scene with crystal clear waters</p>
-        </div>
-        <div class="card" data-description="A vibrant city skyline at sunset">
-            <img src="https://picsum.photos/200/150?3">
-            <h3>City Lights</h3>
-            <p>A vibrant city skyline at sunset</p>
-        </div>
-        <div class="card" data-description="A peaceful forest path in autumn">
-            <img src="https://picsum.photos/200/150?4">
-            <h3>Forest Trail</h3>
-            <p>A peaceful forest path in autumn</p>
-        </div>
-    </div>
-
-    <script>
-        const cards = document.querySelectorAll('.card');
-        cards.forEach(card => {
-            card.addEventListener('click', function() {
-                const title = this.querySelector('h3').textContent;
-                const description = this.querySelector('p').textContent;
-                alert(`Title: ${title}\nDescription: ${description}`);
-
-                cards.forEach(c => c.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-    </script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Md. Uodoy Hossan Rafi | Welcome</title>
+        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="logo">Md. Uodoy Hossan Rafi</div>
+            <nav>
+                <a href="home">Home</a>
+                <a href="education">Education</a>
+                <a href="projects">Projects</a>
+                <a href="skills">Skills</a>
+            </nav>
+        </header>
+        <section class="hero" id="home">
+            <img src="{{ asset('assets/rafiwho.jpg') }}" alt="Md. Uodoy Hossan Rafi" class="profile-img" />
+            <h1>Hi there, I'm Md. Uodoy Hossan Rafi</h1>
+            <h2>About Me</h2>
+            <p>I'm a passionate <b>competitive programmer</b> and <b>problem solver</b>. I enjoy tackling algorithmic challenges and optimizing solutions for efficiency.</p>
+            <ul>
+                <li>Competitive Programmer</li>
+                <li>Strong in C++ and algorithmic problem-solving</li>
+                <li>Interested in Dynamic Programming, Graph, and String Algo</li>
+                <li>Always striving to improve my problem-solving skills</li>
+            </ul>
+            <h2>Tech Stack</h2>
+            <ul>
+                <li><b>Languages:</b> C, C++, Python, Nodejs, Java</li>
+                <li><b>Tools & OS:</b> Ubuntu (x86_64), VS Code, Neovim</li>
+                <li><b>Other Interests:</b> Backend Dev (Node js and MongoDB)</li>
+            </ul>
+            <h2>Featured Projects</h2>
+            <ul>
+                <li><a href="https://github.com/rafiwho" target="_blank"><b>Competitive Programming Solutions</b></a> - Solutions to various CP problems</li>
+                <li><a href="https://github.com/rafiwho" target="_blank"><b>Halaal Water Website</b></a> - Simple website for my Halaal drinking water business</li>
+            </ul>
+            <h2>Connect with Me</h2>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/md-uodoy-hossan-rafi-346a9b1a0/" target="_blank">LinkedIn</a>
+                <a href="https://x.com/uodoyhossan" target="_blank">Twitter</a>
+            </div>
+            <p style="margin-top:2rem;font-weight:600;">Let's Code and Solve!</p>
+        </section>
+        <script src="{{ asset('assets/js/script.js') }}"></script>
+    </body>
 </html>
